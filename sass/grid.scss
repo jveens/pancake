@@ -1,0 +1,37 @@
+
+
+$container-width:   1140px;
+$columns:           12;
+$gutter:            15px;
+
+/*
+  For each column, we need to take the total width and divide it by how many columns
+  We want the column width as a percentage, with the gutters as fixed px
+*/
+
+$single-column:    100 / $columns * 1%;
+
+@mixin unit {
+    background-color: blue;
+    width: calc( #{$single-column} - #{2 * $gutter});
+    height: 100px;
+    float: left;
+    margin-left: #{$gutter};
+    margin-right: #{$gutter};
+
+    &:first-child {
+      width: calc( #{$single-column} - #{$gutter});
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+}
+
+body {
+}
+
+.test-col {
+  @include unit;
+}
