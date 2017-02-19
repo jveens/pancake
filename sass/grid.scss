@@ -1,7 +1,7 @@
 
 
 $container-width:   1140px;
-$columns:           12;
+$columns:           6;
 $gutter:            15px;
 
 /*
@@ -11,27 +11,67 @@ $gutter:            15px;
 
 $single-column:    100 / $columns * 1%;
 
-@mixin unit {
+
+@mixin unit($cols) {
+    $unit-width : $cols/$columns;
     background-color: blue;
-    width: calc( #{$single-column} - #{2 * $gutter});
+    width: calc( (#{$single-column * $cols}) - #{2 * $gutter});
     height: 100px;
     float: left;
     margin-left: #{$gutter};
     margin-right: #{$gutter};
+}
 
-    &:first-child {
-      width: calc( #{$single-column} - #{$gutter});
-      margin-left: 0;
-    }
+@mixin push($cols) {
+  margin-left: calc( (#{$single-column * $cols}) + #{$gutter});
+}
 
-    &:last-child {
-      margin-right: 0;
-    }
+@mixin pull($cols) {
+  margin-right: calc( (#{$single-column * $cols}) + #{$gutter});
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 body {
 }
 
-.test-col {
-  @include unit;
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.griddle {
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+  margin-bottom: 2 * $gutter;
+  @include clearfix;
+}
+
+// spans 1 of 12
+.pancake-12 {
+  @include unit(1);
+}
+
+.pancake-6 {
+  @include unit(2);
+}
+
+// spans 6 of 12 or 50%
+.pancake-2 {
+  @include unit(6);
+}
+
+.billy {
+  @include unit(5);
+}
+
+.sally {
+  @include unit(3);
+  @include push(2);
 }
