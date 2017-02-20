@@ -26,7 +26,7 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  font-style: 62.5%;
+  font-size: 62.5%;
   color: #290444; }
 
 section {
@@ -37,21 +37,29 @@ h1 {
   font-size: 5.2rem; }
 
 h2 {
-  margin: 0; }
+  margin: 0;
+  font-size: 2rem; }
 
 p {
-  font-weight: 600;
-  color: #290444; }
+  font-weight: 500;
+  color: #290444;
+  font-size: 1rem; }
 
 pre {
   font-weight: 600;
   color: #ED76FF;
   font-size: 1.3rem; }
+  pre.comment {
+    color: #bca0e5; }
 
 .label {
   font-size: .7rem;
   display: block;
   margin: 5px 15px; }
+
+.maple-syrup {
+  margin-top: 10px;
+  font-size: 0.7rem; }
 
 .container {
   max-width: 950px;
@@ -98,9 +106,7 @@ pre {
       display: block; }
 
 .usage {
-  background-color: #fbf8ff; }
-  .usage h2 {
-    text-align: center; }
+  background-color: #fefcf7; }
   .usage .usage-text {
     width: calc( (66.66667%) - 30px);
     float: left;
@@ -110,12 +116,14 @@ pre {
     position: relative; }
 
 .config-example {
-  background-color: #eadefd;
+  background-color: #f7f2fe;
   padding: 30px;
   border-radius: 10px; }
 
 .examples {
   font-size: 2rem; }
+  .examples .griddle {
+    margin-bottom: 30px; }
 
 footer {
   text-align: center;
@@ -138,8 +146,7 @@ footer {
 .griddle {
   margin-left: -15px;
   margin-right: -15px;
-  position: relative;
-  margin-bottom: 30px; }
+  position: relative; }
   .griddle:after {
     content: "";
     display: table;

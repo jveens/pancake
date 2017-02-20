@@ -40,6 +40,7 @@ $single-column:    100 / $columns * 1%;
   position: relative;
 }
 
+
 @mixin clearfix {
   &:after {
     content: "";
