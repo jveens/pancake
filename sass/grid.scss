@@ -1,77 +1,28 @@
-
+// Feel free to override any of these variables, they are given default values in config
 
 $container-width:   1140px;
-$columns:           6;
+$columns:           12;
 $gutter:            15px;
+$debug:             false;
 
-/*
-  For each column, we need to take the total width and divide it by how many columns
-  We want the column width as a percentage, with the gutters as fixed px
-*/
+@import 'pancake/config';
 
-$single-column:    100 / $columns * 1%;
-
-
-@mixin unit($cols) {
-    $unit-width : $cols/$columns;
-    background-color: blue;
-    width: calc( (#{$single-column * $cols}) - #{2 * $gutter});
-    height: 100px;
-    float: left;
-    margin-left: #{$gutter};
-    margin-right: #{$gutter};
-}
-
-@mixin push($cols) {
-  margin-left: calc( (#{$single-column * $cols}) + #{$gutter});
-}
-
-@mixin pull($cols) {
-  margin-right: calc( (#{$single-column * $cols}) + #{$gutter});
-}
-
-@mixin clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-body {
-}
-
-.container {
-  width: 800px;
-  margin: 0 auto;
-}
-
-.griddle {
+@mixin griddle {
   margin-left: -$gutter;
   margin-right: -$gutter;
-  margin-bottom: 2 * $gutter;
+  position: relative;
   @include clearfix;
 }
 
 // spans 1 of 12
 .pancake-12 {
-  @include unit(1);
-}
+  @include stack-span(1);
 
-.pancake-6 {
-  @include unit(2);
-}
+  @include bp(md) {
+    @include stack-span(2);
+  }
 
-// spans 6 of 12 or 50%
-.pancake-2 {
-  @include unit(6);
-}
-
-.billy {
-  @include unit(5);
-}
-
-.sally {
-  @include unit(3);
-  @include push(2);
+  @include bp(xs) {
+    @include stack-span(12);
+  }
 }

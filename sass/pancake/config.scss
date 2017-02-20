@@ -1,0 +1,64 @@
+// Define your grid here
+$columns:           12 !default;
+$gutter:            15px !default;
+
+// Debug
+$debug:              false !default;
+$grid-color:        #ED76FF !default;
+
+// $breakpoints:       ('lg' : 1200px),
+//                     ('md' : 950px),
+//                     ('sm' : 600px),
+//                     ('xs' : 420px )
+//                     !default;
+/*
+  For each column, we need to take the total width and divide it by how many columns
+  We want the column width as a percentage, with the gutters as fixed px
+*/
+
+$single-column:    100 / $columns * 1%;
+
+
+@mixin stack-span($cols) {
+    $unit-width : $cols/$columns;
+    width: calc( (#{$single-column * $cols}) - #{2 * $gutter});
+    float: left;
+    margin-left: #{$gutter};
+    margin-right: #{$gutter};
+    @if $debug {
+      outline: 1px solid $grid-color;
+    }
+  }
+
+@mixin move-left($cols) {
+  left: calc( (#{$single-column * $cols}));
+  position: relative;
+}
+
+@mixin move-right($cols) {
+  right: calc( (#{$single-column * $cols}));
+  position: relative;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin bp($point) {
+  @if $point == lg {
+    @media (max-width: 1200px) { @content; }
+  }
+  @else if $point == md {
+    @media (max-width: 900px) { @content; }
+  }
+  @else if $point == sm {
+    @media (max-width: 600px)  { @content; }
+  }
+  @else if $point == xs {
+    @media (max-width: 420px)  { @content; }
+  }
+}

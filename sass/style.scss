@@ -1,0 +1,187 @@
+@import './grid';
+
+$poppins : 'Poppins', sans-serif;
+
+
+$gradient1 : #AC7CF8;
+$gradient2 : #ED76FF;
+$yellow : #F6DA9D;
+$white : #ffffff;
+$black : #290444;
+
+$debug : false;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $poppins;
+  font-style: 62.5%;
+  color: $black;
+}
+
+section {
+  padding: 60px 15px;
+}
+
+// TYPOGRAPHY
+h1 {
+  color: $white;
+  font-size: 5.2rem;
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  font-weight: 600;
+  color: $black;
+}
+
+pre {
+  font-weight: 600;
+  color: $gradient2;
+  font-size: 1.3rem;
+}
+
+.label {
+  font-size: .7rem;
+  display: block;
+  margin: 5px 15px;
+}
+
+.container {
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+}
+
+.hero {
+  background-color: $gradient1;
+  background-image: radial-gradient(ellipse, $gradient2 0%, $gradient1 100%);
+  min-height: 500px;
+  height: 80vh;
+  position: relative;
+
+  .logo {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    display: flex;
+  }
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 30px;
+  }
+}
+
+.about {
+  @include griddle();
+  .about-text {
+    @include stack-span(8);
+    @include move-left(2);
+    text-align: center;
+
+    .maple-syrup {
+      display: block;
+    }
+  }
+}
+
+.usage {
+  background-color: mix( $white, $gradient1, 95%);
+  h2 {
+    text-align: center;
+  }
+  .usage-text {
+    @include stack-span(8);
+    @include move-left(2);
+  }
+}
+
+.config-example {
+  background-color: mix( $white, $gradient1, 75% );
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.examples {
+  font-size: 2rem;
+}
+
+footer {
+  text-align: center;
+  background-color: $black;
+  color: $white;
+  padding: 40px;
+
+  h3 {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.7px;
+    color: mix( $black, $gradient1, 40% );
+
+    a {
+      color: mix( mix($black, $white), $yellow, 70% );
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: $gradient2;
+      }
+    }
+  }
+}
+
+.griddle {
+  @include griddle();
+  margin-bottom: 30px;
+}
+
+[class*=pancake] {
+  background-color: mix($white, $gradient2);
+  text-align: center;
+  padding: 10px 0 5px;
+
+  @include bp('xs') {
+    font-size: 1rem;
+  }
+}
+
+.pancake-1 {
+  @include stack-span(1);
+}
+
+.pancake-2 {
+  @include stack-span(2);
+}
+
+.pancake-3 {
+  @include stack-span(3);
+}
+
+.pancake-4 {
+  @include stack-span(4);
+}
+
+.pancake-5 {
+  @include stack-span(5);
+  @include move-left(3);
+}
+
+.pancake-6 {
+  @include stack-span(6);
+}
+
+.pancake-12 {
+  @include stack-span(12);
+}

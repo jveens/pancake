@@ -1,0 +1,61 @@
+<svg width="201px" height="155px" viewBox="0 0 201 155" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <ellipse id="path-1" cx="94.3630952" cy="34.0540541" rx="94.3630952" ry="34.0540541"></ellipse>
+        <ellipse id="path-3" cx="92.0892857" cy="26.4864865" rx="94.3630952" ry="34.0540541"></ellipse>
+        <ellipse id="path-5" cx="94.3630952" cy="34.0540541" rx="94.3630952" ry="34.0540541"></ellipse>
+        <ellipse id="path-7" cx="92.8472222" cy="24.2162162" rx="94.3630952" ry="34.0540541"></ellipse>
+        <ellipse id="path-9" cx="94.3630952" cy="34.0540541" rx="94.3630952" ry="34.0540541"></ellipse>
+        <ellipse id="path-11" cx="92.8472222" cy="26.4864865" rx="94.3630952" ry="34.0540541"></ellipse>
+        <ellipse id="path-13" cx="94.3630952" cy="34.0540541" rx="94.3630952" ry="34.0540541"></ellipse>
+        <ellipse id="path-15" cx="94.3630952" cy="26.4864865" rx="94.3630952" ry="34.0540541"></ellipse>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <g id="Icon" transform="translate(6.000000, 11.000000)">
+                <g id="stack">
+                    <g id="Group" transform="translate(0.000000, 71.891892)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" stroke="#FCEFB8" stroke-width="5" fill="#FCEFB8" xlink:href="#path-1"></use>
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <use id="Mask" stroke="#FCEFB8" stroke-width="5" fill="#F6DA9D" xlink:href="#path-3"></use>
+                    </g>
+                    <g id="Group" transform="translate(0.000000, 49.189189)">
+                        <mask id="mask-6" fill="white">
+                            <use xlink:href="#path-5"></use>
+                        </mask>
+                        <use id="Mask" stroke="#FCEFB8" stroke-width="5" fill="#FCEFB8" xlink:href="#path-5"></use>
+                        <mask id="mask-8" fill="white">
+                            <use xlink:href="#path-7"></use>
+                        </mask>
+                        <use id="Mask" stroke="#FCEFB8" stroke-width="5" fill="#F6DA9D" xlink:href="#path-7"></use>
+                    </g>
+                    <g id="Group" transform="translate(2.273810, 24.216216)">
+                        <mask id="mask-10" fill="white">
+                            <use xlink:href="#path-9"></use>
+                        </mask>
+                        <use id="Mask" stroke="#FCEFB8" stroke-width="5" fill="#FCEFB8" xlink:href="#path-9"></use>
+                        <mask id="mask-12" fill="white">
+                            <use xlink:href="#path-11"></use>
+                        </mask>
+                        <use id="Mask" stroke="#FCEFB8" stroke-width="5" fill="#F6DA9D" xlink:href="#path-11"></use>
+                    </g>
+                    <g id="Group">
+                        <mask id="mask-14" fill="white">
+                            <use xlink:href="#path-13"></use>
+                        </mask>
+                        <use id="Mask" stroke="#FCEFB8" stroke-width="5" fill="#FCEFB8" xlink:href="#path-13"></use>
+                        <mask id="mask-16" fill="white">
+                            <use xlink:href="#path-15"></use>
+                        </mask>
+                        <use id="Mask" stroke="#FCEFB8" stroke-width="5" fill="#F6DA9D" xlink:href="#path-15"></use>
+                    </g>
+                </g>
+                <path d="M84.0165583,18.4065747 C83.1814028,14.0755454 86.0535485,11.0720421 90.424447,11.6970289 L122.062614,16.2209123 C126.436749,16.8463618 130.564823,20.8847894 131.282632,25.2392086 L135.615584,51.5240432 C136.333524,55.8792612 133.367688,58.9702456 128.970151,58.5008284 C128.970151,58.5008284 120.849077,57.2249247 114.665853,58.0386639 C108.482628,58.852403 92.2083397,62.3010299 89.8393529,60.316308 C87.6446079,58.4775648 87.1362527,49.2757921 87.2799482,42.0216369 C87.4236438,34.7674816 84.0165583,18.4065747 84.0165583,18.4065747 Z" id="Butter" stroke-opacity="0.117725317" stroke="#F6A623" stroke-width="2" fill="#FFF13A" transform="translate(109.797418, 36.269010) rotate(320.000000) translate(-109.797418, -36.269010) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
