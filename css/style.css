@@ -52,6 +52,18 @@ pre {
   pre.comment {
     color: #bca0e5; }
 
+.button {
+  border: 2px solid #290444;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #290444;
+  transition: all 0.15s ease-in-out; }
+  .button:hover {
+    background-color: rgba(255, 255, 255, 0.2); }
+
 .label {
   font-size: .7rem;
   display: block;
@@ -74,6 +86,9 @@ pre {
   min-height: 500px;
   height: 80vh;
   position: relative; }
+  .hero .icon-svg {
+    width: 155px;
+    height: auto; }
   .hero .logo {
     position: absolute;
     top: 55%;
@@ -81,15 +96,17 @@ pre {
     transform: translate(-50%, -50%);
     display: -ms-flexbox;
     display: flex; }
+  .hero .project-info {
+    padding-left: 30px; }
   .hero h1 {
     margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 30px; }
+    margin-bottom: 15px; }
 
 .about {
   margin-left: -15px;
   margin-right: -15px;
-  position: relative; }
+  position: relative;
+  text-align: center; }
   .about:after {
     content: "";
     display: table;
@@ -100,13 +117,20 @@ pre {
     margin-left: 15px;
     margin-right: 15px;
     left: calc( (16.66667%));
-    position: relative;
-    text-align: center; }
+    position: relative; }
     .about .about-text .maple-syrup {
       display: block; }
+  .about .button {
+    margin-top: 30px;
+    display: inline-block;
+    transition: all 0.15s ease-in-out;
+    background-color: #290444;
+    color: #ffffff; }
+    .about .button:hover {
+      background-color: #cdb0fb; }
 
 .usage {
-  background-color: #fefcf7; }
+  background-color: #f8f5fe; }
   .usage .usage-text {
     width: calc( (66.66667%) - 30px);
     float: left;
@@ -116,7 +140,7 @@ pre {
     position: relative; }
 
 .config-example {
-  background-color: #f7f2fe;
+  background-color: #e6d8fd;
   padding: 30px;
   border-radius: 10px; }
 
@@ -137,7 +161,7 @@ footer {
     letter-spacing: 0.7px;
     color: #784cb0; }
     footer h3 a {
-      color: #b19ca1;
+      color: #F6DA9D;
       text-decoration: none;
       transition: color 0.2s ease-in-out; }
       footer h3 a:hover {
