@@ -20,10 +20,18 @@ body {
   font-family: $poppins;
   font-size: 62.5%;
   color: $black;
+
+  &.add-background {
+
+    nav {
+      background-color: mix($gradient2, $gradient1, 20%);
+    }
+  }
+
 }
 
 section {
-  padding: 60px 15px;
+  padding: 50px 15px 60px;
 }
 
 // TYPOGRAPHY
@@ -92,11 +100,55 @@ pre {
   height: 100%;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background-color 0.15s ease-in-out;
+
+  .nav {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: transparent;
+
+    li {
+      text-transform: uppercase;
+      font-size: 1rem;
+
+      a {
+        color: $white;
+        text-decoration: none;
+        transition: color 0.15s ease-in-out;
+
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+
+    @include bp('sm'){
+      width: 70%;
+    }
+
+    @include bp('sm'){
+      width: 90%;
+    }
+  }
+}
+
+
 .hero {
   background-color: $gradient1;
   background-image: radial-gradient(ellipse, $gradient2 0%, $gradient1 100%);
   min-height: 500px;
-  height: 80vh;
+  height: 85vh;
   position: relative;
 
   .icon-svg {

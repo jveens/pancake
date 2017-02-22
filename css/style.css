@@ -10,9 +10,11 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 62.5%;
   color: #290444; }
+  body.add-background nav {
+    background-color: #b97bf9; }
 
 section {
-  padding: 60px 15px; }
+  padding: 50px 15px 60px; }
 
 h1 {
   color: #ffffff;
@@ -66,11 +68,46 @@ pre {
   position: relative;
   height: 100%; }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background-color 0.15s ease-in-out; }
+  nav .nav {
+    list-style-type: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: transparent; }
+    nav .nav li {
+      text-transform: uppercase;
+      font-size: 1rem; }
+      nav .nav li a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.15s ease-in-out; }
+        nav .nav li a:hover {
+          color: #290444; }
+    @media (max-width: 600px) {
+      nav .nav {
+        width: 70%; } }
+    @media (max-width: 600px) {
+      nav .nav {
+        width: 90%; } }
+
 .hero {
   background-color: #AC7CF8;
   background-image: radial-gradient(ellipse, #ED76FF 0%, #AC7CF8 100%);
   min-height: 500px;
-  height: 80vh;
+  height: 85vh;
   position: relative; }
   .hero .icon-svg {
     width: 155px;

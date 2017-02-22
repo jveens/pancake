@@ -10,6 +10,13 @@
 </head>
 
 <body>
+  <nav class="main-nav">
+    <ul class="nav">
+      <li><a href="#about">About</a></li>
+      <li><a href="#usage">Usage</a></li>
+      <li><a href="#examples">Example</a></li>
+    </ul>
+  </nav>
   <section class="hero">
     <div class="container">
       <div class="logo">
@@ -82,7 +89,7 @@
     </div>
   </section> <!-- end hero -->
 
-  <section class="about">
+  <section id="about" class="about">
     <div class="container">
       <div class="griddle">
         <div class="about-text">
@@ -93,7 +100,7 @@
     </div>
   </section>
 
-  <section class="usage">
+  <section id="usage" class="usage">
     <div class="container">
       <div class="griddle">
         <div class="usage-text">
@@ -103,6 +110,8 @@
             <pre>$stack-number  : 12;</pre>
             <pre>$space-between : 15px;</pre>
             <br />
+            <pre class="comment">// Your stacks go in a griddle</pre>
+            <pre>@include griddle()</pre>
             <pre class="comment">// Define the width of your pancakes</pre>
             <pre>@include stack-span(3)</pre>
             <pre class="comment">// Move your pancake to the left</pre>
@@ -115,8 +124,7 @@
     </div>
   </section>
 
-
-  <section class="examples">
+  <section id="examples" class="examples">
     <div class="container">
       <h2>Examples</h2>
       <div class="griddle example-1">
@@ -179,5 +187,55 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Not a ton of code, but hard to
+    const nav = document.querySelector('nav.main-nav');
+    const jumpLinks = document.querySelectorAll('nav.main-nav ul li a');
+    const hero = document.querySelector('section.hero');
+    const trigger = hero.clientHeight / 2;
+
+    function changeNav() {
+      if(window.scrollY >= trigger) {
+        document.body.classList.add('add-background');
+      } else {
+        document.body.classList.remove('add-background');
+      }
+    }
+
+    function scrollTo(element, target, duration) {
+      
+      if (duration <= 0) return;
+      var difference = target - element.scrollTop;
+      var perTick = difference / duration * 15;
+
+      setTimeout(function() {
+          element.scrollTop = element.scrollTop + perTick;
+          if (element.scrollTop === target) return;
+          scrollTo(element, target, duration - 10);
+      }, 10);
+
+    }
+
+    function jump( event ){
+
+      event.preventDefault();
+
+      let element = document.querySelector( this.hash );
+      let target = element.offsetTop - 56;
+
+      scrollTo(document.body, target, 250);
+    }
+
+    window.addEventListener('scroll', changeNav);
+
+    jumpLinks.forEach( link => {
+      link.addEventListener('click', jump);
+    });
+
+
+
+  </script>
+
 </body>
 </html>
