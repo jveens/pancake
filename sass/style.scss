@@ -30,6 +30,10 @@ section {
 h1 {
   color: $white;
   font-size: 5.2rem;
+
+  @include bp('sm'){
+    font-size: 4rem;
+  }
 }
 
 h2 {
@@ -44,9 +48,10 @@ p {
 }
 
 pre {
-  font-weight: 600;
+  font-weight: 500;
   color: $gradient2;
   font-size: 1.3rem;
+  white-space: pre-wrap;
 
   &.comment {
     color: lighten(mix($black, $gradient1, 20%), 15%);
@@ -105,10 +110,19 @@ pre {
     left: 50%;
     transform: translate( -50%, -50% );
     display: flex;
+
+    @include bp('sm'){
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .project-info {
     padding-left: 30px;
+
+    @include bp('sm') {
+      padding-left: 0;
+    }
   }
 
   h1 {
@@ -119,11 +133,15 @@ pre {
 }
 
 .about {
-  @include griddle();
   text-align: center;
   .about-text {
     @include stack-span(8);
     @include move-left(2);
+
+    @include bp('xs') {
+      @include stack-span(10);
+      @include move-left(1);
+    }
 
     .maple-syrup {
       display: block;
@@ -147,6 +165,11 @@ pre {
   .usage-text {
     @include stack-span(8);
     @include move-left(2);
+
+    @include bp('sm') {
+      @include stack-span(10);
+      @include move-left(1);
+    }
   }
 }
 
@@ -154,6 +177,10 @@ pre {
   background-color: mix( $white, $gradient1, 70% );
   padding: 30px;
   border-radius: 10px;
+
+  @include bp('xs') {
+    padding: 15px;
+  }
 }
 
 .examples {
@@ -200,15 +227,25 @@ footer {
 
   @include bp('xs') {
     font-size: 1rem;
+    margin-bottom: 15px;
   }
 }
 
 .pancake-1 {
   @include stack-span(1);
+
+  @include bp('xs') {
+    @include stack-span(6);
+  }
 }
 
 .pancake-2 {
   @include stack-span(2);
+
+  @include bp('xs') {
+    @include stack-span(4);
+  }
+
 }
 
 .pancake-3 {
@@ -230,4 +267,16 @@ footer {
 
 .pancake-12 {
   @include stack-span(12);
+}
+
+.example-1 {
+  @include bp('sm') {
+    display: none;
+  }
+}
+
+.example-2 {
+  @include bp('xs') {
+    display: none;
+  }
 }

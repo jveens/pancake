@@ -14,15 +14,17 @@ $debug:             false;
   @include clearfix;
 }
 
-// spans 1 of 12
-.pancake-12 {
-  @include stack-span(1);
-
-  @include bp(md) {
-    @include stack-span(2);
+@mixin bp($point) {
+  @if $point == lg {
+    @media (max-width: 950px) { @content; }
   }
-
-  @include bp(xs) {
-    @include stack-span(12);
+  @else if $point == md {
+    @media (max-width: 800px) { @content; }
+  }
+  @else if $point == sm {
+    @media (max-width: 600px)  { @content; }
+  }
+  @else if $point == xs {
+    @media (max-width: 420px)  { @content; }
   }
 }

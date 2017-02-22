@@ -2,20 +2,3 @@
   For each column, we need to take the total width and divide it by how many columns
   We want the column width as a percentage, with the gutters as fixed px
 */
-.pancake-12 {
-  width: calc( (8.33333%) - 30px);
-  float: left;
-  margin-left: 15px;
-  margin-right: 15px; }
-  @media (max-width: 900px) {
-    .pancake-12 {
-      width: calc( (16.66667%) - 30px);
-      float: left;
-      margin-left: 15px;
-      margin-right: 15px; } }
-  @media (max-width: 420px) {
-    .pancake-12 {
-      width: calc( (100%) - 30px);
-      float: left;
-      margin-left: 15px;
-      margin-right: 15px; } }
